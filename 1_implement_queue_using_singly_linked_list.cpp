@@ -30,7 +30,12 @@ class myqueue
         tail->next = nNode;
         tail = nNode;
     }
-
+    void pop()
+    {
+        node *del = head;
+        head = head->next;
+        delete del;
+    }
 };
 
 int main(int argc, char const *argv[])
