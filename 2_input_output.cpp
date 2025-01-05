@@ -73,9 +73,14 @@ int main(int argc, char const *argv[])
         cin>>x;
         que.push(x);
     }
-    cout<<que.front()<<endl;
-    cout<<que.back()<<endl;
-    cout<<que.size()<<endl;
-
+    // cout<<que.front()<<endl;
+    // cout<<que.back()<<endl;
+    // cout<<que.size()<<endl;
+    while (!que.empty())
+    {
+        cout<<que.front()<<" ";
+        que.pop();
+    }
+    
     return 0;
 }
