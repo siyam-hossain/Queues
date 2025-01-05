@@ -5,10 +5,12 @@ class node
 {
     public:
     int val;
-    node* next;
+    node *next;
+    node *prev;
     node(int val)
     {
         this->val = val;
+        this->next = NULL;
         this->next = NULL;
     }
 };
@@ -30,6 +32,7 @@ class myqueue
             return;
         }
         tail->next = nNode;
+        nNode->prev = tail;
         tail = nNode;
     }
     void pop()
@@ -44,6 +47,7 @@ class myqueue
             tail == NULL;
             return;
         }
+        head->prev = NULL;
     }
     int front()
     {
