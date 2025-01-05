@@ -18,8 +18,10 @@ class myqueue
     node *head = NULL;
     node *tail = NULL;
 
+    int sz = 0;
     void push(int val)
     {
+        sz++;
         node* nNode = new node(val);
         if(head == NULL)
         {
@@ -32,9 +34,30 @@ class myqueue
     }
     void pop()
     {
+        sz--;
         node *del = head;
         head = head->next;
         delete del;
+        if(head == NULL)
+        {
+            tail == NULL;
+        }
+    }
+    int front()
+    {
+        return head->val;
+    }
+    int back()
+    {
+        return tail->val;
+    }
+    int size()
+    {
+        return sz;
+    }
+    bool empty()
+    {
+        return head == NULL;
     }
 };
 
