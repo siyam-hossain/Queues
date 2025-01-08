@@ -20,12 +20,13 @@ public:
             q1.pop();
             if(q1.empty()) break;
             q2.push(value);
-        }
+        } 
         //copying values
         q1 = q2;
+
         return value;
     }
-    
+    //print top value
     int top() {
         return q1.back();
     }
